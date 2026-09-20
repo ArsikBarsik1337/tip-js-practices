@@ -127,7 +127,7 @@ JavaScript успешно запущен
 
 | Ошибка | Что наблюдалось | Причина | Исправление | Результат после исправления |
 |---|---|---|---|---|
-| Обработка количества задач | `completedTotal = "32"` | Оператор `+` выполнял конкатенацию, так как работал со строками | `const completedTotal = Number(completedText) + Number(additionalText);<br>const remainingTasks = Number(plannedText) - completedTotal;` | `Выполнено: 5 Осталось: 3` |
+| Обработка количества задач | `completedTotal = "32"` | Оператор `+` выполнял конкатенацию, так как работал со строками | `const completedTotal = Number(completedText) + Number(additionalText); const remainingTasks = Number(plannedText) - completedTotal;` | `Выполнено: 5 Осталось: 3` |
 | Граница цикла | `controlSum = 6` (сумма 1 + 2 + 3 ) | Условие `taskNumber < 4` не включает задачу 4 | for (let taskNumber = 1; taskNumber <= 4; taskNumber += 1) | `Контрольная сумма: 10` |
 
 **Вывод после исправлений:**
