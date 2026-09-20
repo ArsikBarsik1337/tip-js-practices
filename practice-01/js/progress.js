@@ -30,10 +30,10 @@ else {
     
     const percent = (completedTasks / totalTasks * 100).toFixed(1)
     let status;
-    if (percent === 0){
+    if (percent == 0.0){
         status = "Не начато";
     }
-    else if (percent === 100) {
+    else if (percent == 100) {
         status = "Завершено";
     }
     else {
