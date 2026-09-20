@@ -39,9 +39,9 @@ else {
     else {
         status = "В работе";
     }
-    console.log("Всего задач: ", totalTasks);
-    console.log("Выполнено: ", completedTasks);
-    console.log("Осталось: ", totalTasks - completedTasks);
-    console.log("Прогресс: ", percent, "%");
-    console.log("Статус: ", status);
+    console.log("Всего задач:", totalTasks);
+    console.log("Выполнено:", completedTasks);
+    console.log("Осталось:", totalTasks - completedTasks);
+    console.log("Прогресс:", percent, "%");
+    console.log("Статус:", status);
 }

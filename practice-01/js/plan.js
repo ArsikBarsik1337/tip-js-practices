@@ -1,7 +1,7 @@
 "use strict";
 
-const totalTasks = 12;
-const completedTasks = 5;
+const totalTasks = 20;
+const completedTasks = 11;
 const dailyLimit = 3;
 
 if (typeof (totalTasks) !== "number" || typeof (completedTasks) !== "number"){
@@ -20,10 +20,11 @@ else if (totalTasks > 1000 || completedTasks > 1000){
     console.log("Ошибка: превышена верхняя граница.");
 }
 else if (completedTasks > totalTasks){
-    console.log("Ошибка: выполнено больше, чем существует.");
+    console.log("Ошибка: некорректное число выполненных задач.");
 }
 else if (completedTasks === 0 && totalTasks === 0){
     console.log("Задач пока нет");
+    console.log("Потребуется дней: 0");
 }
 else if (typeof dailyLimit !== "number") {
     console.log("Ошибка: дневная норма задана не числом.");
@@ -52,7 +53,7 @@ else {
         days += 1;
         doneToday = Math.min(dailyLimit, remains);
         remains -= doneToday;
-        console.log("День ", days, ": выполнено ", doneToday, ", осталось ", remains);
+        console.log("День", days, ": выполнено", doneToday, ", осталось", remains);
     }
     console.log("Потребуется дней: ", days);
 }
